@@ -24,10 +24,10 @@
     <tbody>  
         <?php
         $connection = mysqli_connect(
-            'localhost',
-            'root',
-            'greatness',
-            'websocket-v3-prod-copy'
+          'localhost',
+          'root',
+          'DB_PASSWORD',
+          'DB_NAME'
         );
         $users = mysqli_query($connection, 'SELECT * FROM users');
         while ($user = mysqli_fetch_assoc($users)) {
@@ -43,8 +43,8 @@
     <script src="https://unpkg.com/piesocket-js@1"></script>
     <script>
       var piesocket = new PieSocket({
-        clusterId: 'free3',
-        apiKey: '3EdTQ8iFKAw4it2TZupNsLYr2sGo6AWsddTUHhOSjhShS6FQMwhPjxIsh3vS'
+        clusterId: 'CLUSTER_ID',
+        apiKey: 'API_KEY'
       });
 
       // Connect to a WebSocket channel

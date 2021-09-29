@@ -26,8 +26,8 @@ function publishUser($event){
 $connection = mysqli_connect(
     'localhost',
     'root',
-    'greatness',
-    'websocket-v3-prod-copy'
+    'DB_PASSWORD',
+    'DB_NAME'
 );
 mysqli_query($connection, "INSERT INTO users .....");
 $payload = json_encode([
